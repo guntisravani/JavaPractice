@@ -1,0 +1,24 @@
+// Given two strings, write a method to decide if one is a permutation of the other.
+
+public class Permutation {
+  public static boolean isPermutate(String s1, String s2) {
+  int n1 = s1.length();
+  int n2 = s2.length();
+  if( n1 != n2) {
+    return false;
+  }
+  for(int i = 0; i < n1; i++) {
+    char c = s1.charAt(i);
+    for(int j = 0; j < n2; j++) {
+      if(c != s2.charAt(j)) {
+        return false;
+      }
+    }
+  }
+  return true;
+  }
+  public static void main(String[] args) {
+    boolean res = isPermutate("abc","cba");
+    System.out.println("Permutation :" + res);
+  }
+}
