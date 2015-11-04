@@ -1,5 +1,0 @@
-public class Sum
-{
-  int i = 5/2;
-  System.out.println(i);
-}
